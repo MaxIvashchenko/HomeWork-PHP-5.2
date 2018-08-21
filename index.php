@@ -57,20 +57,8 @@ if (isset($_POST['sign_up'])) {
 <link href='css/style.css' rel='stylesheet' type='text/css' >
 </head>
 <body>
-  <div class="login">
-  	<?php if (!isset($_SESSION['login'])) { ?>
-	<h1>Войдите или зарегистрируйтесь:</h1>
-    <form method="post" class="index">
-    	<input name="login" placeholder="Логин"><br>
-    	<input type="password" name="password" placeholder="Пароль"><br><br>
-        <button type="submit" name="sign_in" class="btn btn-primary btn-block btn-large">Вход</button><br>
-        <button type="submit" name="sign_up" class="btn btn-primary btn-block btn-large">Регистрация</button>
-    </form>
-    <?php } else { ?>
-    <h1>Вы уже вошли на сайт <?php echo ", ".$_SESSION['login'] ?> !</h1>
-    <p><a href="list.php">Вернуться обратно</a></p>
-    <p><a href="core/logout.php">Выйти</a></p>
-<?php } ?>
-</div>
+   <?php
+  echo $twig->render('registration.twig.html');
+?>
 </body>
 </html>
