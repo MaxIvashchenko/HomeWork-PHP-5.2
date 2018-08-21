@@ -1,5 +1,22 @@
 <?php
 session_start(); 
+require_once('./vendor/autoload.php');
+
+$loader = new Twig_Loader_Filesystem('./templates');
+$twig = new Twig_Environment($loader, array(
+  'cache' => './tmp/cache',
+  'auto_reload' => true,
+));
+$templateParams = [
+  'userId' => '',
+  'isEdit' => false,
+  'editedId' => '',
+  'editedDescription' => '',
+  'usersDataOptionsHtml' => '',
+  'taskData' => [],
+  'assignedData' => [],
+];
+
 $username = 'root';
 $password = '';
 $pdo = new PDO('mysql:host=localhost;dbname=test;charset=utf8', $username, $password);
