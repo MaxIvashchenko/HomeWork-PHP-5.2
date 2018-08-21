@@ -52,7 +52,7 @@ if (isset($_POST['sign_up'])) {
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Домашнее задание к лекции 4.3 «SELECT из нескольких таблиц»
+	<title>Домашнее задание к лекции 5.2
 </title>
 <link href='css/style.css' rel='stylesheet' type='text/css' >
 </head>
